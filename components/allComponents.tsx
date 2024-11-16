@@ -25,7 +25,7 @@ interface AllComponentsProps {}
 export const AllComponents: React.FC<AllComponentsProps> = () => {
   const { fsm } = useFSMCtx();
   return (
-    <div className=''>
+    <div className='h-screen'>
       {fsm.action === ACTIONS.WHY && <Why />}
       {fsm.action === ACTIONS.RECOM_COLOR && <RecomSize />}
       {fsm.action === ACTIONS.RECOM_OTHER && <RecomOther />}
@@ -52,9 +52,7 @@ export const AllComponents: React.FC<AllComponentsProps> = () => {
       {fsm.action === ACTIONS.EXCHANGE_COURIER_CONFIRMATION && (
         <ExchangeCourierConfirmation />
       )}
-      {fsm.action === ACTIONS.EXCHANGE_SIZE_METHODS && (
-        <HandleSizeExchange />
-      )}
+      {fsm.action === ACTIONS.EXCHANGE_SIZE_METHODS && <HandleSizeExchange />}
       {fsm.action === ACTIONS.EXCHANGE_SIZE_CONFIRMATION && (
         <ExchangeSizeConfirmation />
       )}

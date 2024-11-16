@@ -36,7 +36,12 @@ const RecomOther: React.FC<RecomOtherProps> = () => {
   const { fsm } = useFSMCtx();
   return (
     <div className='max-w-[500px] w-full px-4 mx-auto flex flex-col gap-2 py-8'>
-      <p className='text-gray-600 text-sm mb-16' onClick={() => fsm.goToAction(ACTIONS.WHY)}>&lt;- Modify issue</p>
+      <p
+        className='text-gray-600 text-sm mb-16'
+        onClick={() => fsm.goToAction(ACTIONS.WHY)}
+      >
+        &lt;- Modify issue
+      </p>
       <div className='w-full flex flex-col items-center text-center'>
         {/* <ItemCarousel items={items} /> */}
         <h1 className='mt-8'>We're sorry to hear that.</h1>
@@ -64,10 +69,10 @@ const RecomOther: React.FC<RecomOtherProps> = () => {
                   className='text-lg text-gray-800'
                   style={{ textDecorationLine: 'line-through' }}
                 >
-                  90€
+                  60€
                 </span>
                 <span className='text-sm text-red-600'>
-                  Only 10€ if you exchange
+                  Only 8€ if you exchange
                 </span>
               </div>
             </div>
@@ -91,10 +96,10 @@ const RecomOther: React.FC<RecomOtherProps> = () => {
                   className='text-lg text-gray-800'
                   style={{ textDecorationLine: 'line-through' }}
                 >
-                  85€
+                  60€
                 </span>
                 <span className='text-sm text-red-600'>
-                  Only 5€ if you exchange
+                  Only 8€ if you exchange
                 </span>
               </div>
             </div>

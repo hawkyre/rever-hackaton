@@ -73,4 +73,8 @@ body {
   h1 {
     @apply text-xl font-bold;
   }
+
+  nextjs-portal {
+    display: none;
+  }
 }

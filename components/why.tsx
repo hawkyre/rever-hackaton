@@ -3,6 +3,8 @@ import { ACTIONS } from '@/fsm';
 import { Options } from './genericQuestion';
 import { Adidas } from './svg/adidas';
 import { useFSMCtx } from './fsmContext';
+import { usePopcorn } from './popcorn';
+import { useEffect } from 'react';
 
 interface WhyProps {}
 
@@ -26,6 +28,9 @@ const options: Options[] = [
 ];
 const Why: React.FC<WhyProps> = () => {
   const { fsm } = useFSMCtx();
+  const { triggerPopcorn } = usePopcorn() as any;
+
+
   return (
     <div className='flex flex-col items-center py-8 max-w-[500px] w-full px-4 mx-auto'>
       <Adidas />
@@ -51,7 +56,7 @@ const Why: React.FC<WhyProps> = () => {
           <button
             className='bg-gray-100 px-4 py-3 w-full rounded-lg  text-start flex justify-between text-sm'
             key={option.title}
-            onClick={() => fsm.goToAction(option.to)}
+            onClick={() =>{ fsm.goToAction(option.to) }}
           >
             <b>{option.title}</b>
             <p>-></p>

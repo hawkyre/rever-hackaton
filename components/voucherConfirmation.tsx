@@ -24,7 +24,7 @@ const VoucherConfirmation: React.FC<VoucherConfirmationProps> = () => {
               <p className='text-xs text-gray-500'>XS | Black</p>
             </div>
             <div className='flex gap-2 items-center'>
-              <span className='text-lg text-gray-800'>90€</span>
+              <span className='text-lg text-gray-800'>60€</span>
             </div>
           </div>
         </div>

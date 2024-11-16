@@ -103,7 +103,7 @@ const WheelOfFortune = () => {
         hidden={spinned}
         onClick={spinWheel}
         disabled={isSpinning}
-        className='px-6 py-4 mt-8 bg-black disabled:bg-black/70 text-white rounded-lg disabled:cursor-not-allowed w-full'
+        className='px-6 py-3 text-sm mt-8 bg-black disabled:bg-black/70 text-white rounded-lg disabled:cursor-not-allowed w-full'
       >
         {isSpinning ? 'Spinning...' : 'Spin Wheel'}
       </button>

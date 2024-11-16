@@ -1,10 +1,19 @@
 'use client';
 
+import { useEffect } from 'react';
+import { usePopcorn } from './popcorn';
+
 interface PositiveMethodConfirmationProps {}
 
 const PositiveMethodConfirmation: React.FC<
   PositiveMethodConfirmationProps
 > = () => {
+  const { triggerPopcorn } = usePopcorn() as any;
+
+  useEffect(() => {
+    triggerPopcorn(15);
+  }, [triggerPopcorn]);
+
   return (
     <div className='max-w-[500px] w-full px-4 mx-auto flex flex-col py-8'>
       <h1>Your store credits have been transfered to your Adidas account!</h1>
@@ -30,10 +39,10 @@ const PositiveMethodConfirmation: React.FC<
                 className='text-lg text-gray-800'
                 style={{ textDecorationLine: 'line-through' }}
               >
-                90€
+                60€
               </span>
               <span className='text-sm text-red-600'>
-                Only 10€ if you use your credits
+                Only 8€ if you use your credits
               </span>
             </div>
           </div>
@@ -57,7 +66,7 @@ const PositiveMethodConfirmation: React.FC<
                 80€
               </span>
               <span className='text-sm text-red-600'>
-                Only 5€ if you use your credits
+                Only 8€ if you use your credits
               </span>
             </div>
           </div>

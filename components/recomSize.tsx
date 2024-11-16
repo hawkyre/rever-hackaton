@@ -90,10 +90,10 @@ const RecomSize: React.FC<RecomSizeProps> = () => {
                   className='text-lg text-gray-800'
                   style={{ textDecorationLine: 'line-through' }}
                 >
-                  90€
+                  60€
                 </span>
                 <span className='text-sm text-red-600'>
-                  Only 10€ if you exchange
+                  Only 8€ if you exchange
                 </span>
               </div>
             </div>
@@ -120,7 +120,7 @@ const RecomSize: React.FC<RecomSizeProps> = () => {
                   80€
                 </span>
                 <span className='text-sm text-red-600'>
-                  Only 5€ if you exchange
+                  Only 8€ if you exchange
                 </span>
               </div>
             </div>

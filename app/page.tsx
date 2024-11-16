@@ -2,11 +2,14 @@
 
 import { AllComponents } from '@/components/allComponents';
 import { FSMCtxProvider } from '@/components/fsmContext';
+import { PopcornProvider } from '@/components/popcorn';
 
 export default function Home() {
   return (
-    <FSMCtxProvider>
-      <AllComponents />
-    </FSMCtxProvider>
+    <PopcornProvider>
+      <FSMCtxProvider>
+        <AllComponents />
+      </FSMCtxProvider>
+    </PopcornProvider>
   );
 }
